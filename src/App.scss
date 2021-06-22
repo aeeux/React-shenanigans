@@ -3,6 +3,11 @@
 $red: #e20001;
 $black: #191919;
 
+//colors
+$lightgray: #eeeeee;
+$darkgray: #979797;
+$lightblue: #0088cc;
+
 html,
 body {
   padding: 0;
@@ -63,6 +68,8 @@ header {
         cursor: pointer;
         font-size: 0.8rem;
         color: $black;
+        font-weight: 900;
+        text-transform: uppercase;
       }
     }
   }
@@ -91,7 +98,7 @@ header {
     }
     .menu-layer {
       position: relative;
-      background-color: $red;
+      background-color: $lightblue;
       height: 100%;
       overflow: hidden;
       .menu-city-background {
