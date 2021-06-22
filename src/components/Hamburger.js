@@ -2,20 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
-import dallas from "../images/dallas.webp"
-import austin from "../images/austin.webp"
-import newyork from "../images/newyork.webp"
-import sanfrancisco from "../images/sanfrancisco.webp"
-import beijing from "../images/beijing.webp"
-
-const cities = [
-  {name: 'Dallas', image: dallas},
-  {name: 'Austin', image: austin},
-  {name: 'New York', image: newyork},
-  {name: 'San Francisco', image: sanfrancisco},
-  {name: 'Beijing', image: beijing},
-]
-
 const Hamburger = ({state}) => {
   //vars for our animated dom nodes
   let menu = useRef(null);
@@ -44,7 +30,7 @@ const Hamburger = ({state}) => {
       });
     } else if (
       state.clicked === true || 
-      state.clicked === true && state.initial === null 
+      state.clicked === true && state.initial === null
       ) {
       //open our menu
       gsap.to(menu, {
@@ -156,7 +142,7 @@ const Hamburger = ({state}) => {
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                   ref={el => (line1 = el)} to="/opportunities">
-                    Opportunities
+                    COVID-19
                   </Link>
                 </li>
                 <li>
@@ -164,7 +150,15 @@ const Hamburger = ({state}) => {
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                   ref={el => (line2 = el)} to="/solutions">
-                    Solutions
+                    5G
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                  onMouseEnter={e => handleHover(e)}
+                  onMouseOut={e => handleHoverExit(e)}
+                  ref={el => (line2 = el)} to="/contact-us">
+                    FLAT EARTH
                   </Link>
                 </li>
                 <li>
@@ -172,7 +166,7 @@ const Hamburger = ({state}) => {
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                   ref={el => (line3 = el)} to="/contact-us">
-                    Contact us
+                    Q-ANON
                   </Link>
                 </li>
               </ul>
@@ -185,14 +179,6 @@ const Hamburger = ({state}) => {
                 during the 90s as desktop publishers bundled the text with
                 their software.
               </p>
-            </div>
-            <div className="locations">
-              Locations:
-              {cities.map(el => (
-                <span key={el.name} onMouseEnter={() => handleCity(el.image)} onMouseOut={handleCityReturn}>
-                  {el.name}
-                </span>
-              ))}
             </div>
           </div>
         </div>
