@@ -118,7 +118,25 @@ const Hamburger = ({state}) => {
     gsap.to(cityBackground, {
       duration: .4,
       opacity: 0
-    })
+    });
+  };
+
+  const handleHover = e => {
+    gsap.to(e.target, {
+      duration: .3,
+      y: 3,
+      skewX: 4,
+      ease: "power3.inOut"
+    });
+  };
+  
+  const handleHoverExit = e => {
+    gsap.to(e.target, {
+      duration: .3,
+      y: -3,
+      skewX: 0,
+      ease: "power3.inOut"
+    });
   }
 
   return (
@@ -134,13 +152,28 @@ const Hamburger = ({state}) => {
             <nav>
               <ul>
                 <li>
-                  <Link ref={el => (line1 = el)} to="/opportunities">Opportunities</Link>
+                  <Link 
+                  onMouseEnter={e => handleHover(e)}
+                  onMouseOut={e => handleHoverExit(e)}
+                  ref={el => (line1 = el)} to="/opportunities">
+                    Opportunities
+                  </Link>
                 </li>
                 <li>
-                  <Link ref={el => (line2 = el)} to="/solutions">Solutions</Link>
+                  <Link 
+                  onMouseEnter={e => handleHover(e)}
+                  onMouseOut={e => handleHoverExit(e)}
+                  ref={el => (line2 = el)} to="/solutions">
+                    Solutions
+                  </Link>
                 </li>
                 <li>
-                  <Link ref={el => (line3 = el)} to="/contact-us">Contact us</Link>
+                  <Link 
+                  onMouseEnter={e => handleHover(e)}
+                  onMouseOut={e => handleHoverExit(e)}
+                  ref={el => (line3 = el)} to="/contact-us">
+                    Contact us
+                  </Link>
                 </li>
               </ul>
             </nav>
