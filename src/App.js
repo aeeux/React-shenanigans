@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./App.scss";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import gsap from "gsap";
 
 function App() {
   return (
@@ -38,13 +39,33 @@ function Contact() {
 }
 
 function Home() {
+
+  let info = useRef(null);
+
+  useEffect(() => {
+     {
+      fadeInUp(info);
+    }
+  });
+
+  const fadeInUp = (node) => {
+    gsap.from(node, {
+      y: 60,
+      duration: 1,
+      delay: .2,
+      opacity: 0,
+      ease: "power3.inOut"
+    });
+  }
+
+
   return (
     <div className='container'>
       <div className='wrapper'>
-        <h5>
-          The <b>HAMBRG</b>, is a creative, engineer driven, global agency
+        <h5 ref={el => (info = el)}>
+          The <b>FACTIO</b>, is a creative, engineer driven, global agency
           working on advancing the software, advertising and design communities
-          to new heights.
+          to new heights in the area of fake news.
         </h5>
       </div>
     </div>
