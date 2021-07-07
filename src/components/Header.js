@@ -62,7 +62,7 @@ const Header = ({ history }) => {
             <Link to='/'>FACTIO.</Link>
           </div>
           <div className="menu">
-            <button disabled={disabled} onClick={handleMenu}>Menu</button>
+            <button disabled={disabled} onClick={handleMenu}><i className="fas fa-align-right"></i>Menu</button>
           </div>
         </div>
       </div>
