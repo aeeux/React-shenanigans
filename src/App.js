@@ -60,13 +60,21 @@ function Home() {
   }
 
   return (
-    <div className='container'>
-      <div className='wrapper'>
-        <h5 ref={el => (info = el)}>
-          The <b>FACTIO</b>, is a creative, engineer driven, global agency
-          working on advancing the software, advertising and design communities
-          to new heights in the area of fake news.
-        </h5>
+    <div className="hero__container" ref={(el) => (info = el)}>
+      <div className="hero">
+        <img
+          className="hero__img"
+          src={require("./images/bacteria_clostridium.jpg").default}
+        />
+      </div>
+      <div className="container" ref={(el) => (info = el)}>
+        <div className="wrapper">
+          <h5>
+            The <b>FACTIO</b>, is a creative, engineer driven, global agency
+            working on advancing the software, advertising and design
+            communities to new heights in the area of fake news.
+          </h5>
+        </div>
       </div>
     </div>
   );
