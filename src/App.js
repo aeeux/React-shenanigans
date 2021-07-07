@@ -64,11 +64,25 @@ function Home() {
       <div className="hero">
         <img
           className="hero__img"
-          src={require("./images/bacteria_clostridium.jpg").default}
+          src={require("./assets/images/bacteria_clostridium.jpg").default}
+        />
+        <video
+          className="hero__img"
+          src={require("./assets/images/bacteria_clostridium.jpg").default}
         />
       </div>
       <div className="container" ref={(el) => (info = el)}>
         <div className="wrapper">
+          <h5>
+            The <b>FACTIO</b>, is a creative, engineer driven, global agency
+            working on advancing the software, advertising and design
+            communities to new heights in the area of fake news.
+          </h5>
+          <h5>
+            The <b>FACTIO</b>, is a creative, engineer driven, global agency
+            working on advancing the software, advertising and design
+            communities to new heights in the area of fake news.
+          </h5>
           <h5>
             The <b>FACTIO</b>, is a creative, engineer driven, global agency
             working on advancing the software, advertising and design
