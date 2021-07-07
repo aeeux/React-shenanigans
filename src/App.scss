@@ -16,6 +16,22 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #e7e7e7;
 }
+.hero__container {
+  .hero {
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    width: 99vw;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    .hero__img {
+      position: relative;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+  }
+}
 
 .container {
   width: 1200px;
