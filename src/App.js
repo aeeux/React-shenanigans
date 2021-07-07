@@ -62,13 +62,10 @@ function Home() {
   return (
     <div className="hero__container" ref={(el) => (info = el)}>
       <div className="hero">
-        <img
-          className="hero__img"
-          src={require("./assets/images/bacteria_clostridium.jpg").default}
-        />
         <video
           className="hero__img"
-          src={require("./assets/images/bacteria_clostridium.jpg").default}
+          autoPlay loop muted
+          src={require("./assets/videos/video_covidvax.mp4").default}
         />
       </div>
       <div className="container" ref={(el) => (info = el)}>
