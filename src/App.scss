@@ -16,7 +16,14 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #e7e7e7;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 .hero__container {
+  margin: 0;
+  top: 0;
   .hero {
     background-color: #000;
     background-size: cover;
@@ -24,11 +31,13 @@ body {
     width: 99vw;
     height: 100vh;
     display: flex;
-    margin: auto;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
     .hero__img {
       position: relative;
       background-size: cover;
       background-position: 50% 50%;
+      opacity: 100%;
     }
   }
 }
@@ -64,18 +73,27 @@ body {
 //header
 
 header {
-  height: 100px;
+  height: 0;
   .inner-header {
-    position: relative;
+    position: fixed;
     z-index: 10;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 250px;
+    @media (min-width: 900px) {
+      width: 1000px;
+    }
     .logo a {
       font-weight: 700;
       text-decoration: none;
+      font-size: 24px;
       color: $black;
+      background-color: #e7e7e760;
+      border-radius: 5px;
+      padding: 5px 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     }
     .menu {
       button {
@@ -83,10 +101,14 @@ header {
         background: none;
         outline: none;
         cursor: pointer;
-        font-size: 0.8rem;
-        color: $black;
+        font-size: 1.5rem;
         font-weight: 900;
         text-transform: uppercase;
+        color: $black;
+        background-color: #e7e7e760;
+        border-radius: 5px;
+        padding: 5px 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
       }
     }
   }
