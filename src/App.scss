@@ -28,13 +28,15 @@ body {
   margin: 0;
   top: 0;
   .hero {
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    background-size: cover;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    .hero__text {
+      font-size: 30em;
+      position: absolute;
+      color: #e20001;
+    }
     .hero__img {
-      position: relative;
     }
   }
 }
@@ -90,7 +92,7 @@ header {
       background-color: #e7e7e760;
       border-radius: 5px;
       padding: 5px 10px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       font-family: "Abril Fatface", cursive;
     }
     .menu {
@@ -107,7 +109,6 @@ header {
         background-color: #e7e7e760;
         border-radius: 5px;
         padding: 5px 10px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
       }
     }
   }
