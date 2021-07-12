@@ -62,14 +62,18 @@ function Home() {
   return (
     <div className="hero__container" ref={(el) => (info = el)}>
       <div className="hero">
+        <div className="hero__text">
+          <h5>Hello Wurld</h5>
+        </div>
         <video
           className="hero__img"
           autoPlay loop muted
-          src={require("./assets/videos/video_covidvax.mp4").default}
+          src={require("./assets/videos/video_landscape01.mp4").default}
         />
       </div>
       <div className="container" ref={(el) => (info = el)}>
-<div        iv className="wrapper">
+        <h5>Hello</h5>
+      <div className="wrapper">
           <h5>
             The <b>FACTIO</b>, is a creative, engineer driven, global agency
             working on advancing the software, advertising and design
