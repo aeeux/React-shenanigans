@@ -31,8 +31,11 @@ body {
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    .hero__text {
-      font-size: 30em;
+    .hero__text h5 {
+      margin-top: 260px;
+      font-size: 10rem;
+      font-weight: 900;
+      padding-left: 300px;
       position: absolute;
       color: #e20001;
     }
@@ -47,6 +50,8 @@ body {
   margin: 0 auto;
   .wrapper {
     padding: 0 48px;
+    font-size: 1.8rem;
+    font-weight: 600;
     .home {
       display: flex;
       justify-content: center;
@@ -61,8 +66,6 @@ body {
       }
       h5 {
         margin-top: 260px;
-        font-size: 1.5rem;
-        font-weight: 600;
         padding-right: 360px;
       }
     }
@@ -94,6 +97,12 @@ header {
       padding: 5px 10px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       font-family: "Abril Fatface", cursive;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: #fff;
+        background-color: $black;
+        transition: all 0.2s ease-in-out;
+      }
     }
     .menu {
       button {
@@ -109,6 +118,12 @@ header {
         background-color: #e7e7e760;
         border-radius: 5px;
         padding: 5px 10px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: $lightgray;
+          background-color: $red;
+          transition: all 0.2s ease-in-out;
+        }
       }
     }
   }
@@ -137,7 +152,7 @@ header {
     }
     .menu-layer {
       position: relative;
-      background-color: $lightblue;
+      background-color: $black;
       height: 100%;
       overflow: hidden;
       .menu-city-background {
@@ -180,7 +195,7 @@ header {
                   color: #fff;
                   text-decoration: none;
                   &:hover {
-                    color: $black;
+                    color: $red;
                   }
                 }
               }
