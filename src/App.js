@@ -69,7 +69,7 @@ function Home() {
         />
       </div>
       <div className="container" ref={(el) => (info = el)}>
-        <div className="wrapper">
+<div        iv className="wrapper">
           <h5>
             The <b>FACTIO</b>, is a creative, engineer driven, global agency
             working on advancing the software, advertising and design
