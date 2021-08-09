@@ -63,12 +63,12 @@ function Home() {
     <div className="hero__container" ref={(el) => (info = el)}>
       <div className="hero">
         <div className="hero__text">
-          <h5>Hello Wurld</h5>
+          <h5>Welcome to Sleepless</h5>
         </div>
         <video
           className="hero__img"
           autoPlay loop muted
-          src={require("./assets/videos/video_landscape01.mp4").default}
+          src={require("./assets/videos/video_aurora.mp4").default}
         />
       </div>
       <div className="container" ref={(el) => (info = el)}>
