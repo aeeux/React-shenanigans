@@ -29,15 +29,13 @@ body {
   top: 0;
   .hero {
     position: relative;
-    left: 50%;
-    transform: translate(-50%);
     .hero__text h5 {
-      margin-top: 260px;
       font-size: 10rem;
       font-weight: 900;
       padding-left: 300px;
       position: absolute;
-      color: #e20001;
+      color: #fff;
+      line-height: 200px;
     }
     .hero__img {
     }
@@ -75,7 +73,13 @@ body {
 //header
 
 header {
-  height: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #e7e7e7;
+  position: fixed;
+  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
   .inner-header {
     position: fixed;
     z-index: 10;
@@ -92,7 +96,7 @@ header {
       text-decoration: none;
       font-size: 24px;
       color: $black;
-      background-color: #e7e7e760;
+      background-color: #ffa500;
       border-radius: 5px;
       padding: 5px 10px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
